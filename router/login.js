@@ -4,6 +4,10 @@ const config = require('../config');
 const User = require('../database/model/User');
 const { facebook } = require('../passport/strategies');
 
+router.get('/', (req, res) => {
+  res.json({ message: 'server is up!' });
+})
+
 router.get('/auth/facebook', facebook({
   scope: ['email']
 }));
