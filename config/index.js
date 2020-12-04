@@ -7,4 +7,5 @@ module.exports = {
   FACEBOOK_CALLBACK_URL: process.env.FACEBOOK_CALLBACK_URL || 'http://localhost:3000/auth/facebook/callback',
   FACEBOOK_CALLBACK_URL_ROUTE: '/auth/facebook/callback',
   FACEBOOK_VERIFY_TOKEN: process.env.FACEBOOK_VERIFY_TOKEN,
+  MONGO_DB_URL: process.env.MONGO_DB_URL
 }
