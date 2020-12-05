@@ -18,7 +18,7 @@ router.get(config.FACEBOOK_CALLBACK_URL_ROUTE,
     // Successful authentication, redirect home.
     const user = await User.findOne({ 'profile.id': req.user.profile.id });
     if(!user) await User.create(req.user);
-    else await User.update({ 'profile.id': req.user.profile.id }, req.user);
+    else await User.updateOne({ 'profile.id': req.user.profile.id }, req.user);
     res.json(req.user);
   });
 
