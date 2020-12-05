@@ -29,7 +29,6 @@ exports.facebookStrategy = new FacebookStrategy(
     ]
   },
   function(accessToken, refreshToken, profile, done) {
-    console.log('accessToken', accessToken);
     done(null, { profile, accessToken });
   }
 )

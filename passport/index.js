@@ -12,7 +12,6 @@ passport.use(new FacebookStrategy({
   function(accessToken, refreshToken, profile, cb) {
     User.findOne({ facebookId: profile.id }, function (err, user) {
       console.log(err)
-      console.log(profile);
       return cb(err, user);
     });
   }

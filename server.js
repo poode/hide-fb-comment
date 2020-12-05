@@ -10,10 +10,6 @@ app.locals.port = config.PORT;
 
 app.use(express.json());
 app.use(passport.initialize());
-// app.use((req, res, next) => {
-//   console.log('REQUEST', req)
-//   next();
-// })
 app.use(router);
 
 module.exports = { app };
